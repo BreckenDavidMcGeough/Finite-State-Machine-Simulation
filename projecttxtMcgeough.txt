@@ -1,0 +1,29 @@
+In order to run my code, first create an edge list of the form
+
+V=[x_0,x_1,x_2,x_3,x_4]
+
+E=[{x_0:x_1,x_1:x_2,x_2:x_3,x_3:x_4,x_4:x_0},{x_0:x_2,x_1:x_3,x_2:x_4,x_3:x_0,x_4:x_1}]
+
+
+Where E[0] is the dictionary for all of the connections with an 'a' edge and 
+E[1] is the dictionary for all of the connections with a 'b' edge 
+Where E[0][x_3] is the connection from x_3 to to x_4 by the edge 'a'
+E[1][x_3] is the connection from x_3 to x_0 by the edge 'b'
+
+For example, the edge list for the graph figure 1 illustrated in the project handout is:
+[{x_0:x_1,x_1:x_2,x_2:x_3,x_3:x_4,x_4:x_5,x_5:x_0}, {x_0:x_2,x_1:x_3,x_2:x_4,x_3:x_5,x_4:x_0,x_5:x_1}]
+
+
+Run:
+
+G = SGraph(V,E)
+print(G.Move(initpos,string))
+Where initpos is the initial position (example: 1)
+String is in the form 'aabbbaa' 
+
+print(G.Count(initpos,dest,n))
+
+print(G.SCount(initpos,dest,n,states))
+Where states is in the form [1,0,1,0]
+
+print(G.Solve(initpos,states))
